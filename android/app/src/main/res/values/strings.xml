@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sawayb</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBlW5U_zUI-RATh-W9SRcwDYbnPWnEbJTs</string>
+</resources>
+
