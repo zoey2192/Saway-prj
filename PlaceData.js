@@ -2,22 +2,22 @@ export const placeData = [
     {
         tag: "danger",
         placename: "Cà Phê Hường",
-        warning: "Hay order Ca Phe Huong tren now thay vi den mua tan noi"
+        warning: "Nơi này tạm tời đang bị phong tỏa, vui lòng quay lại sau"
     },
     {
         tag: "danger",
-        placename: "Bun ba trinh",
-        warning: "Bun ba trinh dang bi phong toa, vui long quay lai sau"
+        placename: "Bún Bà Trinh",
+        warning: "Nơi này tạm tời đang bị phong tỏa, vui lòng quay lại sau"
     },
     {
         tag: "danger",
-        placename: "Bar New Phuong Dong",
-        warning: "Quay dau la bo"
+        placename: "Bar New Phương Đông ",
+        warning: "Nơi này tạm tời đang bị phong tỏa, vui lòng quay lại sau"
     },
     {
         tag: "danger",
-        placename: "Khu dan cu Hoa Xuan",
-        warning: "Quay dau khong vo don"
+        placename: "Khu dân cư Hòa Xuân",
+        warning: "Nơi này tạm tời đang bị phong tỏa, vui lòng quay lại sau"
     },
     {
         tag: "safe",

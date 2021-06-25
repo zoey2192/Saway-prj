@@ -26,15 +26,19 @@ const places = [
   { placeName: "Hanoi", coord: { latitude: 21.022736, longitude: 105.801944 } },
   { placeName: "Ho Chi Minh", coord: { latitude: 10.734408, longitude: 106.705446 } },
   { placeName: "America", coord: { latitude: 46.492142, longitude: -120.552266 } },
-  { placeName: "Australia", coord: { latitude: -23.039819, longitude: 144.504289 } }
+  { placeName: "Australia", coord: { latitude: -23.039819, longitude: 144.504289 } },
+  { placeName: "Mumbai", coord: { latitude: 19.07376175450274,  longitude: 72.87705774156781 } }
 ]
 
 const dangerAreas = [
-	{latitude: 16.02031502351113, longitude:  108.20362607172, caseNumber: 100 },
+	{latitude: 16.067270, longitude:  108.208891, caseNumber: 100 },
+	{latitude: 16.046729, longitude:  108.227164, caseNumber: 150 },
+	{latitude: 16.039201759805714, longitude:  108.21151865300047, caseNumber: 180 },
 	{latitude: 16.08271714986332,  longitude:  108.2210043131769, caseNumber: 500 },
 	{latitude: 16.02031502351, longitude:  108.20362607172, caseNumber: 200 },
 	{latitude: 16.105374, longitude:  108.225410, caseNumber: 10 },
-	{latitude: 16.020315023511138, longitude:  108.20, caseNumber: 1000 },
+	{latitude: 16.030258067836712,  longitude:  108.215410, caseNumber: 700 },
+	{latitude: 16.052601, longitude:  108.217695, caseNumber: 1000 },
 ]
 
 const MAP_STYLE = mapStyle
@@ -191,7 +195,7 @@ class App extends Component {
 					latitude: this.state.coord ? this.state.coord.latitude : 15.9684863,
 					longitude: this.state.coord ? this.state.coord.longitude : 108.2583681
 				}}
-				icon={require('./boy.png')}
+				icon={require('./human.png')}
 				>
 				<Callout>
 				<View style={{}}>
@@ -223,19 +227,78 @@ class App extends Component {
 
 
 			{dangerAreas.map((area, index) => (
-				<Circle
-					key={index}
-					center={{
-						latitude: area.latitude,
-						longitude: area.longitude,
-					}}
-					radius={area.caseNumber}
-					strokeWidth={2}
-					strokeColor={area.caseNumber < 200 ?" rgba(255, 255, 0, 0.55)" : "rgba(234, 42, 24, 0.83)"}
-					fillColor={area.caseNumber < 200 ?" rgba(255, 255, 0, 0.15)" :  "rgba(234, 42, 42, 0.35)"}
-					style={{ opacity: .5 }}
-				/>
+				// <Circle
+				// 	key={index}
+				// 	center={{
+				// 		latitude: area.latitude,
+				// 		longitude: area.longitude,
+				// 	}}
+				// 	radius={area.caseNumber}
+				// 	strokeWidth={2}
+				// 	strokeColor={area.caseNumber < 100 ? " rgba(255, 255, 0, 0.55)" : area.caseNumber < 200 ? "rgba(234, 42, 24, 0.53)" :  "rgba(0, 255, 24, 0.53)"}
+				// 	fillColor={area.caseNumber < 100 ?" rgba(255, 255, 0, 0.15)" : area.caseNumber < 200 ? "rgba(234, 42, 42, 0.35)" : "rgba(0, 255, 24, 0.33)"}
+			    //     style={{ opacity: 0.5 }}
+				// />
+
+				<View>
+					{area.caseNumber <= 190 ? (
+						<Circle
+							key={index}
+							center={{
+								latitude: area.latitude,
+								longitude: area.longitude,
+							}}
+							radius={area.caseNumber}
+							strokeWidth={2}
+							strokeColor="rgba(0, 183, 17, 1)"
+							fillColor="rgba(0, 183, 17, 0.52)"
+						/>	
+					) : null}	
+						
+
+					{area.caseNumber >= 220 && area.caseNumber <= 500 ? (
+						<Circle
+							key={index}
+							center={{
+								latitude: area.latitude,
+								longitude: area.longitude,
+							}}
+							radius={area.caseNumber}
+							strokeWidth={2}
+							strokeColor="rgba(255, 255, 0, 1)"
+							fillColor="rgba(255, 255, 0, 0.41)"
+						/>	
+					) : null}
+
+					{area.caseNumber > 500 ? (
+						<Circle
+							key={index}
+							center={{
+								latitude: area.latitude,
+								longitude: area.longitude,
+							}}
+							radius={area.caseNumber}
+							strokeWidth={2}
+							strokeColor="rgba(250, 0, 0, 1)"
+							fillColor="rgba(255, 0, 0, 0.5)"
+						/>	
+					) : null}
+				</View>
 			))}
+
+					
+
+					
+			        
+					
+
+				
+					
+					
+
+					
+					
+					
 {/* 
 			<MapViewDirections
 				origin={{ 
