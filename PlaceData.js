@@ -2,22 +2,22 @@ export const placeData = [
     {
         tag: "danger",
         placename: "Cà Phê Hường",
-        warning: "Nơi này tạm tời đang bị phong tỏa, vui lòng quay lại sau"
+        warning: "Chính phủ đang hạn chế đi ra ngoài, bạn có thể order Cà Phê Hưởng tại địa chỉ: https://www.now.vn/da-nang/ca-phe-nhan"
     },
     {
         tag: "danger",
         placename: "Bún Bà Trinh",
-        warning: "Nơi này tạm tời đang bị phong tỏa, vui lòng quay lại sau"
+        warning: "Chính phủ đang hạn chế đi ra ngoài, bạn có thể order Bún Bà Trinh tại địa chỉ: http://bunmocbachieu.com/"
     },
     {
         tag: "danger",
         placename: "Bar New Phương Đông ",
-        warning: "Nơi này tạm tời đang bị phong tỏa, vui lòng quay lại sau"
+        warning: "Nơi này tạm tời đang bị phong tỏa, vui lòng quay lại sau."
     },
     {
         tag: "danger",
         placename: "Khu dân cư Hòa Xuân",
-        warning: "Nơi này tạm tời đang bị phong tỏa, vui lòng quay lại sau"
+        warning: "Nơi này tạm tời đang bị phong tỏa, vui lòng quay lại sau."
     },
     {
         tag: "safe",
@@ -29,7 +29,7 @@ export const placeData = [
     },
     {
         tag: "safe",
-        placename: "Nha Huy",
+        placename: "Nhà Huy",
         coord: {
             latitude: 16.013253,
             longitude: 108.209546,
